@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            whisper: '#F5F4F9',
+            'royal-purple': '#5E3DB3',
+            'dark-violet': '#090C35',
+          },
+          width: {
+            '104': '26rem',
+          }
+        }
+      }
+    }
+  </script>
+  <title>AthLetes UI</title>
+</head>
+
+<body class="min-h-screen">
+  <!-- Section 1 -->
+  <section>
+    <div class="bg-white">
+      <div class="grid sm:grid-cols-3 container mx-auto max-w-screen-lg relative lg:grid-cols-2">
+        <div
+          class="absolute flex justify-center w-full sm:w-1/2 sm:-left-10 sm:justify-start lg:left-0 lg:justify-center">
+          <img src="./images/footballer.png" alt="footballer" class="w-52 pt-16 sm:w-80 sm:pt-1">
+        </div>
+        <div class="sm:col-start-2 sm:col-span-2 p-4 h-80 sm:h-full">
+          <h1 class="text-5xl text-gray-200">ATHLETES</h1>
+          <h2 class="text-2xl text-stone-300 space-x-2 hidden mt-8 sm:flex"><span class="text-sm pt-1 text-black relative after:content-[''] after:block after:absolute after:bg-royal-purple
+            after:h-1 after:w-4 after:rounded after:bottom-1">01</span><span>CONNECTION</span>
+          </h2>
+          <p class="text-sm mt-3 hidden sm:block">Connect with coaches directly, you can ping coaches to view profile.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="bg-whisper">
+      <div class="grid sm:grid-cols-3 container mx-auto max-w-screen-lg lg:grid-cols-2">
+        <div class="col-start-2 col-span-2 p-4">
+          <h2 class="text-2xl text-stone-300 flex space-x-2 pt-10 sm:pt-0"><span class="text-sm pt-1 text-black relative after:content-[''] after:block after:absolute after:bg-royal-purple
+            after:h-1 after:w-4 after:rounded after:bottom-1 after:left-px">02</span><span>COLLABORATION</span></h2>
+          <p class="text-sm mt-3">Work with other student athletes to increase visability. When you share and like other
+            players videos it will
+            increase your visability as a player. This is the teamwork aspect to Surface 1</p>
+        </div>
+      </div>
+    </div>
+    <div class="bg-royal-purple text-white">
+      <div class="grid sm:grid-cols-3 container mx-auto max-w-screen-lg lg:grid-cols-2">
+        <div class="col-start-2 col-span-2 p-4">
+          <h2 class="text-2xl text-stone-300 flex space-x-2"><span class="text-sm pt-1 text-black relative after:content-[''] after:block after:absolute after:bg-white
+            after:h-1 after:w-4 after:rounded after:bottom-1 after:left-px">03</span><span>GROWTH</span></h2>
+          <p class="text-sm mt-3">Resources and tools for you to get better as a student Athelte. Access to training
+            classes,
+            tutor sessions,
+            etc
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 2 -->
+  <section>
+    <div class="bg-white">
+      <div class="grid sm:grid-cols-3 container mx-auto max-w-screen-lg relative lg:grid-cols-2">
+        <div class="sm:col-span-2 p-4 pt-8 lg:col-span-1">
+          <h1 class="text-5xl text-gray-200">PLAYERS</h1>
+          <h2 class="text-2xl text-stone-300 flex space-x-2 mt-8"><span class="text-sm pt-1 text-black relative after:content-[''] after:block after:absolute after:bg-royal-purple
+            after:h-1 after:w-4 after:rounded after:bottom-1">01</span><span>CONNECTION</span></h2>
+          <p class="text-sm mt-3">Connect with talented athlete directly, you can watch their skills through video
+            showreels
+            directly from Surface 1.</p>
+        </div>
+        <div class="absolute right-0 w-1/2 flex sm:justify-start lg:justify-center">
+          <img src="./images/basketballer.png" alt="basketballer" class="w-104">
+        </div>
+      </div>
+    </div>
+    <div class="bg-whisper">
+      <div class="grid grid-cols-2 container mx-auto max-w-screen-lg">
+        <div class="sm:col-span-2 p-4 lg:col-span-1">
+          <h2 class="text-2xl text-stone-300 flex space-x-2"><span class="text-sm pt-1 text-black relative after:content-[''] after:block after:absolute after:bg-royal-purple
+            after:h-1 after:w-4 after:rounded after:bottom-1 after:left-px">02</span><span>COLLABORATION</span></h2>
+          <p class="text-sm mt-3">Work with recruiter to increase your chances of finding talented athlete.</p>
+        </div>
+      </div>
+    </div>
+    <div class="bg-dark-violet text-white">
+      <div class="grid grid-cols-2 container mx-auto max-w-screen-lg">
+        <div class="sm:col-span-2 p-4 lg:col-span-1">
+          <h2 class="text-2xl text-stone-300 flex space-x-2"><span class="text-sm pt-1 text-royal-purple relative after:content-[''] after:block after:absolute after:bg-white
+            after:h-1 after:w-4 after:rounded after:bottom-1 after:left-px">03</span><span>GROWTH</span></h2>
+          <p class="text-sm mt-3">Save your time, recruit proper athletes for your team.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+
+</html>

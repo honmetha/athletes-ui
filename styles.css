@@ -1,0 +1,23 @@
+.flickity-button {
+  display: none;
+}
+
+.flickity-page-dots {
+  bottom: 10px;
+}
+
+.flickity-page-dots .dot.is-selected {
+  background: #5e3db3;
+}
+
+.main-carousel:after {
+  content: "flickity";
+  display: none; /* hide :after */
+}
+
+@media screen and (min-width: 640px) {
+  /* disable Flickity for large devices */
+  .main-carousel:after {
+    content: "";
+  }
+}

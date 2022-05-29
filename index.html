@@ -22,49 +22,62 @@
       }
     }
   </script>
+  <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+  <link rel="stylesheet" href="./styles.css">
   <title>AthLetes UI</title>
 </head>
+
+<!-- TODO: Finish up the styles -->
+<!-- TODO: Clean up the code (HTML and CSS) -->
+<!-- TODO: Deployment -->
+<!-- TODO: Test UI on all devices -->
+<!-- TODO: Change footballer name back -->
 
 <body class="min-h-screen">
   <!-- Section 1 -->
   <section>
-    <div class="bg-white">
-      <div class="grid sm:grid-cols-3 container mx-auto max-w-screen-lg relative lg:grid-cols-2">
-        <div
-          class="absolute flex justify-center w-full sm:w-1/2 sm:-left-10 sm:justify-start lg:left-0 lg:justify-center">
-          <img src="./images/footballer.png" alt="footballer" class="w-52 pt-16 sm:w-80 sm:pt-1">
-        </div>
-        <div class="sm:col-start-2 sm:col-span-2 p-4 h-80 sm:h-full">
-          <h1 class="text-5xl text-gray-200">ATHLETES</h1>
-          <h2 class="text-2xl text-stone-300 space-x-2 hidden mt-8 sm:flex"><span class="text-sm pt-1 text-black relative after:content-[''] after:block after:absolute after:bg-royal-purple
+    <div class="grid sm:grid-cols-3 container mx-auto max-w-screen-lg relative lg:grid-cols-2">
+      <div
+        class="absolute flex justify-center w-full sm:w-1/2 sm:-left-10 sm:justify-start lg:left-0 lg:justify-center">
+        <img src="./images/footballer2.png" alt="footballer" class="w-52 z-10 pt-20 sm:w-80 sm:pt-1">
+      </div>
+      <div class="sm:col-start-2 sm:col-span-2 p-4 h-80 sm:h-full">
+        <h1 class="text-5xl text-gray-200">ATHLETES</h1>
+      </div>
+    </div>
+    <div class="main-carousel" data-flickity='{ "cellAlign": "left", "contain": true, "watchCSS": true }'>
+      <div class="h-60 sm:h-auto grid sm:grid-cols-3 container mx-auto max-w-screen-lg lg:grid-cols-2">
+        <div class="sm:col-start-2 sm:col-span-2 p-4">
+          <h2 class="text-2xl text-stone-300 space-x-2 flex"><span class="text-sm pt-1 text-black relative after:content-[''] after:block after:absolute after:bg-royal-purple
             after:h-1 after:w-4 after:rounded after:bottom-1">01</span><span>CONNECTION</span>
           </h2>
-          <p class="text-sm mt-3 hidden sm:block">Connect with coaches directly, you can ping coaches to view profile.
+          <p class="text-sm mt-3">Connect with coaches directly, you can ping coaches to view profile.
           </p>
         </div>
       </div>
-    </div>
-    <div class="bg-whisper">
-      <div class="grid sm:grid-cols-3 container mx-auto max-w-screen-lg lg:grid-cols-2">
-        <div class="col-start-2 col-span-2 p-4">
-          <h2 class="text-2xl text-stone-300 flex space-x-2 pt-10 sm:pt-0"><span class="text-sm pt-1 text-black relative after:content-[''] after:block after:absolute after:bg-royal-purple
+      <div class="bg-whisper">
+        <div class="h-60 sm:h-auto grid sm:grid-cols-3 container mx-auto max-w-screen-lg lg:grid-cols-2">
+          <div class="col-start-2 col-span-2 p-4">
+            <h2 class="text-2xl text-stone-300 flex space-x-2 pt-10 sm:pt-0"><span class="text-sm pt-1 text-black relative after:content-[''] after:block after:absolute after:bg-royal-purple
             after:h-1 after:w-4 after:rounded after:bottom-1 after:left-px">02</span><span>COLLABORATION</span></h2>
-          <p class="text-sm mt-3">Work with other student athletes to increase visability. When you share and like other
-            players videos it will
-            increase your visability as a player. This is the teamwork aspect to Surface 1</p>
+            <p class="text-sm mt-3">Work with other student athletes to increase visability. When you share and like
+              other
+              players videos it will
+              increase your visability as a player. This is the teamwork aspect to Surface 1</p>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="bg-royal-purple text-white">
-      <div class="grid sm:grid-cols-3 container mx-auto max-w-screen-lg lg:grid-cols-2">
-        <div class="col-start-2 col-span-2 p-4">
-          <h2 class="text-2xl text-stone-300 flex space-x-2"><span class="text-sm pt-1 text-black relative after:content-[''] after:block after:absolute after:bg-white
+      <div class="bg-royal-purple text-white">
+        <div class="h-60 sm:h-auto grid sm:grid-cols-3 container mx-auto max-w-screen-lg lg:grid-cols-2">
+          <div class="col-start-2 col-span-2 p-4">
+            <h2 class="text-2xl text-stone-300 flex space-x-2"><span class="text-sm pt-1 text-black relative after:content-[''] after:block after:absolute after:bg-white
             after:h-1 after:w-4 after:rounded after:bottom-1 after:left-px">03</span><span>GROWTH</span></h2>
-          <p class="text-sm mt-3">Resources and tools for you to get better as a student Athelte. Access to training
-            classes,
-            tutor sessions,
-            etc
-          </p>
+            <p class="text-sm mt-3">Resources and tools for you to get better as a student Athelte. Access to training
+              classes,
+              tutor sessions,
+              etc
+            </p>
+          </div>
         </div>
       </div>
     </div>
@@ -72,41 +85,47 @@
 
   <!-- Section 2 -->
   <section>
-    <div class="bg-white">
+    <div class="grid sm:grid-cols-3 container mx-auto max-w-screen-lg relative lg:grid-cols-2">
+      <div class="sm:col-span-2 p-4 pt-8 lg:col-span-1">
+        <h1 class="text-5xl text-gray-200">PLAYERS</h1>
+      </div>
+      <div class="absolute right-0 w-1/2 flex sm:justify-start lg:justify-center">
+        <img src="./images/basketballer.png" alt="basketballer" class="w-104">
+      </div>
+    </div>
+    <div class="main-carousel" data-flickity='{ "cellAlign": "left", "contain": true, "watchCSS": true }'>
       <div class="grid sm:grid-cols-3 container mx-auto max-w-screen-lg relative lg:grid-cols-2">
         <div class="sm:col-span-2 p-4 pt-8 lg:col-span-1">
-          <h1 class="text-5xl text-gray-200">PLAYERS</h1>
           <h2 class="text-2xl text-stone-300 flex space-x-2 mt-8"><span class="text-sm pt-1 text-black relative after:content-[''] after:block after:absolute after:bg-royal-purple
             after:h-1 after:w-4 after:rounded after:bottom-1">01</span><span>CONNECTION</span></h2>
           <p class="text-sm mt-3">Connect with talented athlete directly, you can watch their skills through video
             showreels
             directly from Surface 1.</p>
         </div>
-        <div class="absolute right-0 w-1/2 flex sm:justify-start lg:justify-center">
-          <img src="./images/basketballer.png" alt="basketballer" class="w-104">
-        </div>
       </div>
-    </div>
-    <div class="bg-whisper">
-      <div class="grid grid-cols-2 container mx-auto max-w-screen-lg">
-        <div class="sm:col-span-2 p-4 lg:col-span-1">
-          <h2 class="text-2xl text-stone-300 flex space-x-2"><span class="text-sm pt-1 text-black relative after:content-[''] after:block after:absolute after:bg-royal-purple
+      <div class="bg-whisper">
+        <div class="grid grid-cols-2 container mx-auto max-w-screen-lg">
+          <div class="sm:col-span-2 p-4 lg:col-span-1">
+            <h2 class="text-2xl text-stone-300 flex space-x-2"><span class="text-sm pt-1 text-black relative after:content-[''] after:block after:absolute after:bg-royal-purple
             after:h-1 after:w-4 after:rounded after:bottom-1 after:left-px">02</span><span>COLLABORATION</span></h2>
-          <p class="text-sm mt-3">Work with recruiter to increase your chances of finding talented athlete.</p>
+            <p class="text-sm mt-3">Work with recruiter to increase your chances of finding talented athlete.</p>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="bg-dark-violet text-white">
-      <div class="grid grid-cols-2 container mx-auto max-w-screen-lg">
-        <div class="sm:col-span-2 p-4 lg:col-span-1">
-          <h2 class="text-2xl text-stone-300 flex space-x-2"><span class="text-sm pt-1 text-royal-purple relative after:content-[''] after:block after:absolute after:bg-white
+      <div class="bg-dark-violet text-white">
+        <div class="grid grid-cols-2 container mx-auto max-w-screen-lg">
+          <div class="sm:col-span-2 p-4 lg:col-span-1">
+            <h2 class="text-2xl text-stone-300 flex space-x-2"><span class="text-sm pt-1 text-royal-purple relative after:content-[''] after:block after:absolute after:bg-white
             after:h-1 after:w-4 after:rounded after:bottom-1 after:left-px">03</span><span>GROWTH</span></h2>
-          <p class="text-sm mt-3">Save your time, recruit proper athletes for your team.
-          </p>
+            <p class="text-sm mt-3">Save your time, recruit proper athletes for your team.
+            </p>
+          </div>
         </div>
       </div>
     </div>
   </section>
+
+  <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
 </body>
 
 </html>

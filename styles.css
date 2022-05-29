@@ -1,9 +1,13 @@
+* {
+  font-family: "Roboto", sans-serif;
+}
+
 .flickity-button {
   display: none;
 }
 
 .flickity-page-dots {
-  bottom: 10px;
+  bottom: 1.25rem;
 }
 
 .flickity-page-dots .dot.is-selected {

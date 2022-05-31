@@ -2,8 +2,16 @@ $sm-breakpoint: 640px;
 $md-breakpoint: 768px;
 $lg-breakpoint: 1024px;
 
+$whisper: #f5f4f9;
+$royal-purple: #5e3db3;
+$dark-violet: #090c35;
+
 * {
   font-family: "Roboto", sans-serif;
+}
+
+body {
+  min-height: 100vh;
 }
 
 .flickity-button {
@@ -22,11 +30,36 @@ $lg-breakpoint: 1024px;
   display: none;
 }
 
+/* sm screen breakpoint */
+@media screen and (min-width: $sm-breakpoint) {
+  .main-carousel:after {
+    content: "";
+  }
+}
+
+/* lg screen breakpoint */
+@media screen and (min-width: $lg-breakpoint) {
+  .custom-text-border {
+    -webkit-text-stroke: 1px black;
+  }
+  .custom-text-shadow {
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+}
+
+.custom-container {
+  max-width: 1024px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.margin-left-2 {
+  margin-left: 0.5rem;
+}
+
 .header {
   display: grid;
   position: relative;
-  margin-left: auto;
-  margin-right: auto;
   @media screen and (min-width: $sm-breakpoint) {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
@@ -87,36 +120,137 @@ $lg-breakpoint: 1024px;
       }
     }
   }
-}
 
-.footballer {
-  width: 13rem;
-  z-index: 10;
-  padding-top: 5rem;
-}
-
-/* sm screen breakpoint */
-@media screen and (min-width: $sm-breakpoint) {
-  .main-carousel:after {
-    content: "";
+  &__footballer {
+    width: 13rem;
+    z-index: 10;
+    padding-top: 5rem;
+    @media screen and (min-width: $sm-breakpoint) {
+      width: 20rem;
+      padding-top: 0.25rem;
+    }
   }
 
-  .footballer {
+  &__basketballer {
     width: 20rem;
+    z-index: 10;
+    padding-top: 6rem;
+    @media screen and (min-width: $sm-breakpoint) {
+      width: 26rem;
+      padding-top: 0rem;
+    }
+  }
+}
+
+.subsection {
+  background-color: $whisper;
+  width: 100%;
+
+  &__connection {
+    @media screen and (min-width: $sm-breakpoint) {
+      background-color: inherit;
+    }
+  }
+  &__growth {
+    &--primary {
+      @media screen and (min-width: $sm-breakpoint) {
+        background-color: $royal-purple;
+        color: white;
+      }
+    }
+    &--secondary {
+      @media screen and (min-width: $sm-breakpoint) {
+        background-color: $dark-violet;
+        color: white;
+      }
+    }
+  }
+
+  &__grid {
+    height: 16rem;
+    display: grid;
+    @media screen and (min-width: $sm-breakpoint) {
+      height: auto;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+    @media screen and (min-width: $lg-breakpoint) {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+
+  &__content {
+    padding: 1rem;
+    @media screen and (min-width: $sm-breakpoint) {
+      grid-column: span 2 / span 2;
+    }
+
+    &--section-1 {
+      @media screen and (min-width: $sm-breakpoint) {
+        grid-column-start: 2;
+      }
+    }
+    &--section-2 {
+      @media screen and (min-width: $lg-breakpoint) {
+        grid-column: span 1 / span 1;
+      }
+    }
+  }
+
+  &__header {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    display: flex;
+    padding-top: 3rem;
+    color: #c2c2c2;
+    @media screen and (min-width: $sm-breakpoint) {
+      padding-top: 0rem;
+    }
+  }
+
+  &__number {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
     padding-top: 0.25rem;
-  }
-}
+    position: relative;
+    color: black;
+    &:after {
+      content: "";
+      display: block;
+      position: absolute;
+      height: 0.25rem;
+      width: 1rem;
+      border-radius: 0.25rem;
+      bottom: 0.25rem;
+      background-color: $royal-purple;
+    }
 
-/* md screen breakpoint */
-@media screen and (min-width: $md-breakpoint) {
-}
-
-/* lg screen breakpoint */
-@media screen and (min-width: $lg-breakpoint) {
-  .custom-text-border {
-    -webkit-text-stroke: 1px black;
+    &--growth {
+      &-primary {
+        @media screen and (min-width: $sm-breakpoint) {
+          &:after {
+            background-color: white;
+          }
+        }
+      }
+      &-secondary {
+        @media screen and (min-width: $sm-breakpoint) {
+          color: $royal-purple;
+          &:after {
+            background-color: white;
+          }
+        }
+      }
+    }
+    &--center {
+      &:after {
+        left: 1px;
+      }
+    }
   }
-  .custom-text-shadow {
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+  &__description {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    margin-top: 0.75rem;
   }
 }

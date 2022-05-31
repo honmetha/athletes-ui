@@ -13,59 +13,50 @@
     href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
     rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            whisper: '#F5F4F9',
-            'royal-purple': '#5E3DB3',
-            'dark-violet': '#090C35',
-          },
-          width: {
-            '104': '26rem',
-          },
-        }
-      }
-    }
-  </script>
   <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
   <link rel="stylesheet" href="./styles.css">
   <link rel="icon" type="image/png" href="./images/football.png" />
   <title>Athletes UI</title>
 </head>
 
-<body class="min-h-screen">
+<!-- TODO: Remove Tailwind CSS -->
+<!-- TODO: Change custom container name -->
+<!-- TODO: SCSS variables -->
+
+<body>
   <main>
     <!-- Section 1 -->
     <section>
-      <div class="header container max-w-screen-lg">
+      <div class="header custom-container">
         <div class="header__image header__image--section-1">
-          <img src="./images/footballer.png" alt="footballer" class="footballer">
+          <img src="./images/footballer.png" alt="footballer" class="header__footballer">
         </div>
         <div class="header__text header__text--section-1">
           <h1>ATHLETES</h1>
         </div>
       </div>
       <div class="main-carousel" data-flickity='{ "wrapAround": true, "watchCSS": true }'>
-        <div class="bg-whisper w-full sm:bg-inherit">
-          <div class="h-64 w-full grid container mx-auto max-w-screen-lg sm:h-auto sm:grid-cols-3 lg:grid-cols-2">
-            <div class="p-4 sm:col-start-2 sm:col-span-2">
-              <h2 class="text-2xl text-stone-300 flex space-x-2 pt-12 sm:pt-0"><span class="text-sm pt-1 text-black relative after:content-[''] after:block after:absolute after:bg-royal-purple
-            after:h-1 after:w-4 after:rounded after:bottom-1">01</span><span
-                  class="custom-text-border custom-text-shadow">CONNECTION</span>
+        <div class="subsection subsection__connection">
+          <div class="subsection__grid custom-container">
+            <div class="subsection__content subsection__content--section-1">
+              <h2 class="subsection__header">
+                <span class="subsection__number">01</span>
+                <span class="custom-text-border custom-text-shadow margin-left-2">CONNECTION</span>
               </h2>
-              <p class="text-sm mt-3">Connect with coaches directly, you can ping coaches to view profile.
+              <p class="subsection__description">Connect with coaches directly, you can ping coaches to view profile.
               </p>
             </div>
           </div>
         </div>
-        <div class="bg-whisper w-full">
-          <div class="h-64 grid container mx-auto max-w-screen-lg sm:h-auto sm:grid-cols-3 lg:grid-cols-2">
-            <div class="col-start-2 col-span-2 p-4">
-              <h2 class="text-2xl text-stone-300 flex space-x-2 pt-12 sm:pt-0"><span class="text-sm pt-1 text-black relative after:content-[''] after:block after:absolute after:bg-royal-purple
-            after:h-1 after:w-4 after:rounded after:bottom-1 after:left-px">02</span><span>COLLABORATION</span></h2>
-              <p class="custom-text-shadow text-sm mt-3 lg:font-medium">Work with other student athletes to increase
+        <div class="subsection">
+          <div class="subsection__grid custom-container">
+            <div class="subsection__content subsection__content--section-1">
+              <h2 class="subsection__header">
+                <span class="subsection__number subsection__number--center">02</span>
+                <span class="margin-left-2">COLLABORATION</span>
+              </h2>
+              <p class="custom-text-shadow lg:font-medium subsection__description">Work with other student athletes to
+                increase
                 visability. When
                 you share and like
                 other
@@ -74,13 +65,15 @@
             </div>
           </div>
         </div>
-        <div class="bg-whisper w-full sm:bg-royal-purple sm:text-white">
-          <div class="h-64 grid container mx-auto max-w-screen-lg sm:h-auto sm:grid-cols-3 lg:grid-cols-2">
-            <div class="col-start-2 col-span-2 p-4">
-              <h2 class="text-2xl text-stone-300 flex space-x-2 pt-12 sm:pt-0"><span
-                  class="text-sm pt-1 text-black relative after:content-[''] after:block after:absolute after:bg-royal-purple after:h-1 after:w-4 after:rounded after:bottom-1 after:left-px sm:after:bg-white">03</span><span>GROWTH</span>
+        <div class="subsection subsection__growth--primary">
+          <div class="subsection__grid custom-container">
+            <div class="subsection__content subsection__content--section-1">
+              <h2 class="subsection__header">
+                <span class="subsection__number subsection__number--growth-primary subsection__number--center">03</span>
+                <span class="margin-left-2">GROWTH</span>
               </h2>
-              <p class="text-sm mt-3">Resources and tools for you to get better as a student Athelte. Access to training
+              <p class="subsection__description">Resources and tools for you to get better as a student Athelte. Access
+                to training
                 classes,
                 tutor sessions,
                 etc
@@ -93,42 +86,48 @@
 
     <!-- Section 2 -->
     <section>
-      <div class="header container max-w-screen-lg">
+      <div class="header custom-container">
         <div class="header__text header__text--section-2">
           <h1>PLAYERS</h1>
         </div>
         <div class="header__image header__image--section-2">
-          <img src="./images/basketballer.png" alt="basketballer" class="basketballer w-80 z-10 pt-24 sm:w-104 sm:pt-0">
+          <img src="./images/basketballer.png" alt="basketballer" class="header__basketballer">
         </div>
       </div>
       <div class="main-carousel" data-flickity='{ "wrapAround": true, "watchCSS": true }'>
-        <div class="bg-whisper w-full sm:bg-inherit">
-          <div class="h-64 w-full grid container mx-auto max-w-screen-lg sm:h-auto sm:grid-cols-3 lg:grid-cols-2">
-            <div class="p-4 sm:col-span-2 lg:col-span-1">
-              <h2 class="text-2xl text-stone-300 flex space-x-2 pt-12 sm:pt-0"><span class="text-sm pt-1 text-black relative after:content-[''] after:block after:absolute after:bg-royal-purple
-            after:h-1 after:w-4 after:rounded after:bottom-1">01</span><span>CONNECTION</span></h2>
-              <p class="text-sm mt-3">Connect with talented athlete directly, you can watch their skills through video
-                showreels
-                directly from Surface 1.</p>
-            </div>
-          </div>
-        </div>
-        <div class="bg-whisper w-full">
-          <div class="h-64 grid container mx-auto max-w-screen-lg sm:h-auto sm:grid-cols-3 lg:grid-cols-2">
-            <div class="p-4 sm:col-span-2 lg:col-span-1">
-              <h2 class="text-2xl text-stone-300 flex space-x-2 pt-12 sm:pt-0"><span class="text-sm pt-1 text-black relative after:content-[''] after:block after:absolute after:bg-royal-purple
-            after:h-1 after:w-4 after:rounded after:bottom-1 after:left-px">02</span><span>COLLABORATION</span></h2>
-              <p class="text-sm mt-3">Work with recruiter to increase your chances of finding talented athlete.</p>
-            </div>
-          </div>
-        </div>
-        <div class="bg-whisper w-full sm:bg-dark-violet sm:text-white">
-          <div class="h-64 grid container mx-auto max-w-screen-lg sm:h-auto sm:grid-cols-3 lg:grid-cols-2">
-            <div class="p-4 sm:col-span-2 lg:col-span-1">
-              <h2 class="text-2xl text-stone-300 flex space-x-2 pt-12 sm:pt-0"><span
-                  class="text-sm pt-1 text-royal-purple relative after:content-[''] after:block after:absolute after:bg-royal-purple after:h-1 after:w-4 after:rounded after:bottom-1 after:left-px sm:after:bg-white">03</span><span>GROWTH</span>
+        <div class="subsection subsection__connection">
+          <div class="subsection__grid custom-container">
+            <div class="subsection__content subsection__content--section-2">
+              <h2 class="subsection__header">
+                <span class="subsection__number">01</span>
+                <span class="margin-left-2">CONNECTION</span>
               </h2>
-              <p class="text-sm mt-3">Save your time, recruit proper athletes for your team.
+              <p class="subsection__description">Connect with talented athlete directly, you can watch their skills
+                through video showreels directly from Surface 1.</p>
+            </div>
+          </div>
+        </div>
+        <div class="subsection">
+          <div class="subsection__grid custom-container">
+            <div class="subsection__content subsection__content--section-2">
+              <h2 class="subsection__header">
+                <span class="subsection__number subsection__number--center">02</span>
+                <span class="margin-left-2">COLLABORATION</span>
+              </h2>
+              <p class="subsection__description">Work with recruiter to increase your chances of finding talented
+                athlete.</p>
+            </div>
+          </div>
+        </div>
+        <div class="subsection subsection__growth--secondary">
+          <div class="subsection__grid custom-container">
+            <div class="subsection__content subsection__content--section-2">
+              <h2 class="subsection__header">
+                <span
+                  class="subsection__number subsection__number--growth-secondary subsection__number--center">03</span>
+                <span class="margin-left-2">GROWTH</span>
+              </h2>
+              <p class="subsection__description">Save your time, recruit proper athletes for your team.
               </p>
             </div>
           </div>

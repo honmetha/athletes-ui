@@ -1,0 +1,122 @@
+$sm-breakpoint: 640px;
+$md-breakpoint: 768px;
+$lg-breakpoint: 1024px;
+
+* {
+  font-family: "Roboto", sans-serif;
+}
+
+.flickity-button {
+  display: none;
+}
+
+.flickity-page-dots {
+  bottom: 1.25rem;
+}
+.flickity-page-dots .dot.is-selected {
+  background: #5e3db3;
+}
+
+.main-carousel:after {
+  content: "flickity";
+  display: none;
+}
+
+.header {
+  display: grid;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  @media screen and (min-width: $sm-breakpoint) {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  @media screen and (min-width: $lg-breakpoint) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  &__image {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    @media screen and (min-width: $sm-breakpoint) {
+      width: 50%;
+      justify-content: start;
+    }
+    @media screen and (min-width: $lg-breakpoint) {
+      justify-content: center;
+    }
+
+    &--section-1 {
+      @media screen and (min-width: $sm-breakpoint) {
+        left: -2.5rem;
+      }
+      @media screen and (min-width: $lg-breakpoint) {
+        left: 0px;
+      }
+    }
+
+    &--section-2 {
+      @media screen and (min-width: $sm-breakpoint) {
+        right: 0px;
+      }
+    }
+  }
+
+  &__text {
+    font-size: 3rem;
+    line-height: 1;
+    color: #e7e7e7;
+    height: 20rem;
+    padding: 1rem;
+    @media screen and (min-width: $sm-breakpoint) {
+      height: auto;
+      grid-column: span 2 / span 2;
+    }
+
+    &--section-1 {
+      @media screen and (min-width: $sm-breakpoint) {
+        grid-column-start: 2;
+      }
+    }
+
+    &--section-2 {
+      padding-top: 2rem;
+      @media screen and (min-width: $lg-breakpoint) {
+        grid-column: span 1 / span 1;
+      }
+    }
+  }
+}
+
+.footballer {
+  width: 13rem;
+  z-index: 10;
+  padding-top: 5rem;
+}
+
+/* sm screen breakpoint */
+@media screen and (min-width: $sm-breakpoint) {
+  .main-carousel:after {
+    content: "";
+  }
+
+  .footballer {
+    width: 20rem;
+    padding-top: 0.25rem;
+  }
+}
+
+/* md screen breakpoint */
+@media screen and (min-width: $md-breakpoint) {
+}
+
+/* lg screen breakpoint */
+@media screen and (min-width: $lg-breakpoint) {
+  .custom-text-border {
+    -webkit-text-stroke: 1px black;
+  }
+  .custom-text-shadow {
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+}

@@ -1,9 +1,43 @@
+blockquote,
+dl,
+dd,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+figure,
+p,
+pre {
+  margin: 0;
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+img,
+svg,
+video,
+canvas,
+audio,
+iframe,
+embed,
+object {
+  display: block;
+}
+
 * {
   font-family: "Roboto", sans-serif;
+  margin: 0px;
 }
 
 body {
   min-height: 100vh;
+}
+
+main {
+  overflow: hidden;
 }
 
 .flickity-button {
@@ -23,31 +57,32 @@ body {
   display: none;
 }
 
-/* sm screen breakpoint */
 @media screen and (min-width: 640px) {
   .main-carousel:after {
     content: "";
   }
 }
 
-/* lg screen breakpoint */
-@media screen and (min-width: 1024px) {
-  .custom-text-border {
-    -webkit-text-stroke: 1px black;
-  }
-  .custom-text-shadow {
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  }
-}
-
-.custom-container {
+.container {
   max-width: 1024px;
   margin-left: auto;
   margin-right: auto;
 }
 
-.margin-left-2 {
+.ml-2 {
   margin-left: 0.5rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .lg-text-border {
+    -webkit-text-stroke: 1px black;
+  }
+  .lg-text-shadow {
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+  .lg-font-medium {
+    font-weight: 500;
+  }
 }
 
 .header {
@@ -120,7 +155,7 @@ body {
   font-size: 3rem;
   line-height: 1;
   color: #e7e7e7;
-  height: 20rem;
+  height: 18rem;
   padding: 1rem;
 }
 
@@ -200,7 +235,7 @@ body {
 }
 
 .subsection__grid {
-  height: 16rem;
+  height: 15rem;
   display: -ms-grid;
   display: grid;
 }

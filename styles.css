@@ -185,6 +185,7 @@ main {
 
 .header__footballer {
   width: 13rem;
+  height: intrinsic;
   z-index: 10;
   padding-top: 5rem;
 }
@@ -198,6 +199,7 @@ main {
 
 .header__basketballer {
   width: 20rem;
+  height: intrinsic;
   z-index: 10;
   padding-top: 6rem;
 }

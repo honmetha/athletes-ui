@@ -154,6 +154,7 @@ main {
 
   &__footballer {
     width: 13rem;
+    height: intrinsic;
     z-index: 10;
     padding-top: 5rem;
     @media screen and (min-width: $sm-breakpoint) {
@@ -164,6 +165,7 @@ main {
 
   &__basketballer {
     width: 20rem;
+    height: intrinsic;
     z-index: 10;
     padding-top: 6rem;
     @media screen and (min-width: $sm-breakpoint) {
